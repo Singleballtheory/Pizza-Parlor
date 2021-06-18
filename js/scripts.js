@@ -11,7 +11,7 @@ function Pizza (size, topping) {
 }
 
 Pizza.prototype.calculateSizes = function() {
-  if (pieTypes.size === "Small") {
+  if (this.size === "Small") {
     this.price += 10;
   } else if (this.size === "Medium") {
     this.price += 12;
@@ -40,22 +40,42 @@ function pizzaResult (pizzaSize) {
 // UI Logic
 
 $(document).ready(function() {
-  
-})
+  $("form#pizza-form").submit(function(event) {
+    event.preventDefault();
+
+    let sizeSelected = $("input:radio[name=size]:checked").val();
+    let toppingsSelected = $("input:checkbox[name=toppings]:checked");
+    let pizzaPie = [];
+    toppingsSelected.each(function() {
+      pizzaPie.push($(this).val());
+    })
+
+    let yourPizza = new Pizza(sizeSelected, pizzaPie);
+    yourPizza.calculateSizes();
+    yourPizza.calculateToppings();
+
+    $("#orderPlaced").show();
+    $("#sizeSelected").text(yourPizza.size);
+
+    let yourToppings = (yourPizza.topping).join(", ");
+    $("#toppingsSelected").text(yourToppings);
+    $("#pizzaTotal").text("$" + yourPizza.price);
+  })
+});
 
 
 
-function runTests () {
-  console.log("When we create a small pepperoni pizza, we get a new pizza")
-  console.log(new Pizza("Small", "Pepperoni"))
-  console.log("Expected:", {size: "Small", topping: "Pepperoni"})
-}
+// function runTests () {
+//   console.log("When we create a small pepperoni pizza, we get a new pizza")
+//   console.log(new Pizza("Small", "Pepperoni"))
+//   console.log("Expected:", {size: "Small", topping: "Pepperoni"})
+// }
 
-function runTests () {
-  console.log("When we create a Large pepperoni pizza, we get a new pizza")
-  console.log(new Pizza("Large", "Pepperoni"))
-  console.log("Expected:", {size: "Large", topping: "Pepperoni"})
-}
+// function runTests () {
+//   console.log("When we create a Large pepperoni pizza, we get a new pizza")
+//   console.log(new Pizza("Large", "Pepperoni"))
+//   console.log("Expected:", {size: "Large", topping: "Pepperoni"})
+// }
 
 
-runTests()
+// runTests()
