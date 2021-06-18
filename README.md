@@ -20,5 +20,11 @@ Stretch goals:
 ```
 Test: When we create a small pepperoni pizza, we get a new pizza
 Code: new Pizza("Small", "Pepperoni")
-Expected result: Pizza {size: "Small", "Pepperoni"}
+Expected result: Pizza {size: "Small", topping: "Pepperoni"}
+```
+
+```
+Test: When we create a Large pepperoni pizza, we get a new pizza
+Code: new Pizza("Large", "Pepperoni")
+Expected result: Pizza {size: "Large", topping: "Pepperoni"}
 ```
