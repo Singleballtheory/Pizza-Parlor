@@ -17,3 +17,8 @@ Stretch goals:
 - images for toppings
 - image for when a pizza is ordered with a "ready for pickup" message
 
+```
+Test: When we create a small pepperoni pizza, we get a new pizza
+Code: new Pizza("Small", "Pepperoni")
+Expected result: Pizza {size: "Small", "Pepperoni"}
+```
