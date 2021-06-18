@@ -28,3 +28,15 @@ Test: When we create a Large pepperoni pizza, we get a new pizza
 Code: new Pizza("Large", "Pepperoni")
 Expected result: Pizza {size: "Large", topping: "Pepperoni"}
 ```
+
+```
+Test: We will get an array of toppings when call on the pieTypes.topping index
+Code: pieTypes.topping
+Expected result: (4) ["Pepperoni", "Cheese", "Canadian Bacon", "Pinneapple"]
+```
+
+```
+Test: Return a pizza based upon size
+
+```
+Test: We get price results when we enter a pizza size
