@@ -1,21 +1,45 @@
-Create a pizza website:
-- customer chooses size and toppings (object/constructors)
-- price is returned to the customer (prototype) 
+#### Pizza Parlor
+By Scott Hutley
 
-What I need:
-Back End
-- Business logic for sizes and pricing
-- Business logic fr toppings and pricing
+----
+
+## Technologies Used
+* JavaScript
+* html 
+* Constructors with prototypes
+* For looping
+* Bootstrap.css
+* jquery
+
+----
+
+## Purpose
+This project aims to inform the user how much a pizza will cost them after they've selected the size and toppings they would like. It does this by performing simple math calculations, first on the pizza size and then on each topping, for a combined final total. 
+
+----
+
+## Setup/Instructions
+* Visit https://github.com/Singleballtheory/Pizza-Parlor in your web browser
+* Clone the repository to your desktop
+* Open folder and click on the index.html
+* Order your pizza
+
+## Known Issues
+* No known issues at this time
+
+----
+
+## License
+[MIT](.license.txt)
+
+----
+
+## Contact Information
+Please contact me if you wish to provide feedback, report bugs or make suggestion.
+
+Scott Hutley scotthutley1@comcast.net
 
 
-Front End
-- pizza sizes (selectors)
-- pizza toppings (selectors)
-- price calculation (agrigate calculating as they go or final price revealed at the end?)
-
-Stretch goals:
-- images for toppings
-- image for when a pizza is ordered with a "ready for pickup" message
 
 ```
 Test: When we create a small pepperoni pizza, we get a new pizza
@@ -29,14 +53,3 @@ Code: new Pizza("Large", "Pepperoni")
 Expected result: Pizza {size: "Large", topping: "Pepperoni"}
 ```
 
-```
-Test: We will get an array of toppings when call on the pieTypes.topping index
-Code: pieTypes.topping
-Expected result: (4) ["Pepperoni", "Cheese", "Canadian Bacon", "Pinneapple"]
-```
-
-```
-Test: Return a pizza based upon size
-
-```
-Test: We get price results when we enter a pizza size
