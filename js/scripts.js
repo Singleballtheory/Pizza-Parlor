@@ -20,15 +20,6 @@ Pizza.prototype.calculateToppings = function() {
   }
 }
 
-function pizzaResult (pizzaSize) {
-  for (let i= 0; i < pieTypes.length; i++) {
-    const size = size[i].size
-    if (size === pizzaSize) {
-      return size[i]
-    }
-  }
-}
-
 
 // UI Logic
 
