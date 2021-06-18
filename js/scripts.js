@@ -1,9 +1,3 @@
-const pieTypes = {
-  size: ["Small", "Medium", "Large"],
-  topping: ["Pepperoni", "Cheese", "Canadian Bacon", "Pineapple"],
-  price: 0,
-}
-
 function Pizza (size, topping) {
   this.size = size;
   this.topping = topping;
@@ -18,7 +12,6 @@ Pizza.prototype.calculateSizes = function() {
   } else if (this.size === "Large") {
     this.price += 14;
   } 
-  return Pizza
 }
 
 Pizza.prototype.calculateToppings = function() {
