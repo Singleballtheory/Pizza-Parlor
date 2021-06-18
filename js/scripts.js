@@ -37,6 +37,12 @@ function pizzaResult (pizzaSize) {
 }
 
 
+// UI Logic
+
+$(document).ready(function() {
+  
+})
+
 
 
 function runTests () {
